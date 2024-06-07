@@ -11,3 +11,12 @@ wnd.bgcolor("RED")
 #Setting the Width and Height of Screen
 wnd.setup(width=750 , height=750)
 wnd.tracer(0)
+
+#UC-2-Creating Mouth of the Snake  
+mouth = turtle.Turtle()
+mouth.shape("CIRCLE")
+mouth.color("BLUE")
+mouth.penup()
+mouth.goto(0, 0)
+mouth.direction = "Stop"
+
