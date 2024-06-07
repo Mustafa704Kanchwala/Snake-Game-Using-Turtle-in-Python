@@ -20,3 +20,12 @@ mouth.penup()
 mouth.goto(0, 0)
 mouth.direction = "Stop"
 
+#UC-3-Creating Food in Game
+food = turtle.Turtle()
+f_color = random.choice(["GREEN , BLUE , BLACK , ORANGE"])
+f_shape = random.choice(["SQUARE , CIRCLE , TRIANGLE"])
+food.speed(0)
+food.shape(f_shape)
+food.color(f_color)
+food.penup()
+food.goto(0 , 100)
