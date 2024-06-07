@@ -29,3 +29,13 @@ food.shape(f_shape)
 food.color(f_color)
 food.penup()
 food.goto(0 , 100)
+
+#UC-4-Score Board of the game
+pen = turtle.Turtle()
+pen.speed(0)
+pen.shape("SQUARE")
+pen.color("WHITE")
+pen.penup()
+pen.hideturtle()
+pen.goto(0 , 250)
+pen.write("Score: 0  High score: 0",align="center",font=("Candara",24,"bold"))
