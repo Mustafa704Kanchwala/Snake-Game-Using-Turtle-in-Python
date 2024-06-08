@@ -85,4 +85,20 @@ while True:
                 x = random.randint(-270,270)
                 y = random.randint(-270,270)
                 food.goto(x , y)
-                
+
+#UC-7-Adding Segments 
+        new_segments = turtle.Turtle()
+        new_segments.speed(0)
+        new_segments.shape("SQUARE")
+        new_segments.color("ORANGE")
+        #tail colour
+        new_segments.penup()
+
+        segments.append(new_segments)
+        delay -= 0.001
+        score += 10
+        if score > high_score:
+            high_score = score
+            pen.clear()
+            pen.write("Score: {} High Score: {}".format(score,high_score),
+                      font=("Candara",24,"Bold"))
