@@ -61,3 +61,28 @@ wnd.onkeypress(go_up , "w")
 wnd.onkeypress(go_down ,"s")
 wnd.onkeypress(go_left , "a")
 wnd.onkeypress(go_right , "d")
+segments =[]
+
+#UC-6-Main Gameplay of Snake Game
+while True:
+    wnd.update()
+    if mouth.xcor() >290 or mouth.xcor() < -290 or mouth.ycor() > 290 or mouth.ycor() < -290:
+        time.sleep()
+        mouth.goto(0, 0)
+        mouth.direction = "Stop"
+        colors = random.choice(["Orange , Blue , Grey"])
+        shapes = random.choice(["Square","Circle"])
+        for segment in segments:
+            segment.goto(1000,1000)
+            segments.clear()
+            score = 0
+            delay = 0.1
+            high_score = 0
+            pen.clear()
+            pen.write("Score :{} High Score: {}".format(
+                score,high_score),align="center",font=("Candara",24,"Bold"))
+            if mouth.distance(food) < 20:
+                x = random.randint(-270,270)
+                y = random.randint(-270,270)
+                food.goto(x , y)
+                
